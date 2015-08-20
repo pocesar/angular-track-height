@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "standard": "standard --format angular-track-height.js > angular-track-height-std.js"
+    "standard": "standard --format angular-track-height.js"
   },
   "repository": {
     "type": "git",

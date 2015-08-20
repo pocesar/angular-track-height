@@ -3,6 +3,12 @@
     <head>
         <meta charset="utf-8">
         <style type="text/css">
+            .afterfloat:after {
+                position: absolute;
+            }
+            .the-bottom:after {
+                content: 'The bottom has been reached at least once';
+            }
             .bigger-than-40:after {
                 content: 'Bigger than 40';
             }
@@ -19,12 +25,14 @@
             <div
                 track-height="w00t"
                 track-height-apply="max"
-                ng-class="{'bigger-than-40': ctrl.heights().current > 40, 'only-200': ctrl.heights().current == 200, 'bigger-than-80': ctrl.heights().current > 80}"
+                class="afterfloat"
                 >
                 <div ng-repeat="i in ctrl.randomText track by $index">OK</div>
             </div>
 
             <button ng-click="ctrl.setRandomText()">Set random text</button>
+
+            <p ng-class="{'the-bottom': ctrl.heights().min == 20,'bigger-than-40': ctrl.heights().current > 40, 'only-200': ctrl.heights().current == 200, 'bigger-than-80': ctrl.heights().current > 80}"></p>
 
             <div>Heights<br>current: {{ ctrl.heights().current }}<br>min: {{ ctrl.heights().min }}<br>max: {{ ctrl.heights().max }}</div>
         </div>
