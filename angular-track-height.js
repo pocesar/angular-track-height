@@ -111,13 +111,15 @@
                     var max = apply.indexOf('max') > -1;
 
                     trackHeight.listeners.push(function(heights){
-                        if (min && max) {
-                            el.css('height', heights.max);
-                        } else if (max) {
-                            el.css('minHeight', heights.max);
-                        } else if (min) {
-                            el.css('minHeight', heights.min);
-                        }
+                        requestAnimationFrame(function(){
+                            if (min && max) {
+                                el.css('height', heights.max);
+                            } else if (max) {
+                                el.css('minHeight', heights.max);
+                            } else if (min) {
+                                el.css('minHeight', heights.min);
+                            }
+                        });
                     });
 
                 }
