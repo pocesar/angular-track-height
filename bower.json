@@ -1,0 +1,27 @@
+{
+  "name": "angular-track-height",
+  "version": "0.1.0",
+  "homepage": "https://github.com/pocesar/angular-track-height",
+  "description": "Watch an element for the min or/and max height then save it for use somewhere else",
+  "main": "angular-track-height.js",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "track",
+    "height",
+    "directive",
+    "service"
+  ],
+  "dependencies": {
+      "angular": ">=1.3 <2",
+      "jquery": ">=1.11 <3"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
