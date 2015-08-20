@@ -49,7 +49,7 @@
                             unobserve();
 
                             unwatch = scope.$watch(function() {
-                                currentMinHeight = parseInt(el.css('minHeight'));
+                                currentMinHeight = parseInt(el.css('minHeight'), 10);
 
                                 el.css('minHeight', '');
 
