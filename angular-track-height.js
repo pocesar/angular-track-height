@@ -51,7 +51,7 @@
                             unwatch = scope.$watch(function() {
                                 currentMinHeight = parseInt(el.css('minHeight'));
 
-                                el.css('minHeight', 0);
+                                el.css('minHeight', '');
 
                                 var outer = el.outerHeight();
 
